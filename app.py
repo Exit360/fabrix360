@@ -10,10 +10,10 @@ import email.message
 from PIL import Image
 
 
-logo = Image.open('images/logo360.png')
+logo = Image.open('images/logo360_s.png')
 st.image(logo,
 		 caption='Welcome to fabrix360 free source info | fabrix360.com',
-		 use_column_width=200)
+		 use_column_width=150)
 
 def main():
 	### simple login ###

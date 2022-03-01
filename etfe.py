@@ -18,10 +18,10 @@ from mail import email
 
 def etfe():
 
-	skylight = Image.open('images/skylight.png')
+	skylight = Image.open('images/skylight_s.png')
 	st.image(skylight,
 		 caption='Typical ETFE Skylight for Enclosed and Partially Enclosed Buildings and Structures-Arched Roofs, Height < 33m , Rise-to-Span ration < 0.2',
-		 use_column_width=200)
+		 use_column_width=150)
 
 	st.write("Calculating ETFE film thickness for given cushion width start by changing cushion width(m) on below slider bar and insert initial film thicknesses:")
 
@@ -29,8 +29,8 @@ def etfe():
 
 	slider_val = st.slider("Cushion width(m):", min_value=1.0, max_value=4.5, value=(1.0))
 	cushion_width= slider_val
-	etfe_thick_outer = float(st.text_input("Insert initial guess for outer ETFE film thcikness (microns):", value=250))
-	etfe_thick_inner = float(st.text_input("Insert initial guess for inner ETFE film thcikness(microns):", value=250))
+	etfe_thick_outer = float(st.text_input("Insert initial guess for outer ETFE film thickness (microns):", value=250))
+	etfe_thick_inner = float(st.text_input("Insert initial guess for inner ETFE film thickness(microns):", value=250))
 	
    
 
@@ -83,7 +83,7 @@ def draw_cushion(etfe_thick_outer,etfe_thick_inner,cushion_width):
 	m=500
 	# Create scatter trace of text labels
 	fig.add_trace(go.Scatter(
-		x=[0.5, 0.5],
+		x=[cushion_width/2, cushion_width/2],
 		y=[0.25, 1.75],
 		text=[f"Inner layer={etfe_thick_inner} microns",
 			  f"Outer layer={etfe_thick_outer} microns",
