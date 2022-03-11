@@ -119,20 +119,20 @@ def draw_cushion(etfe_thick_outer,etfe_thick_inner,cushion_width):
 
 	st.plotly_chart(fig)
 
-	st.markdown(f'<h1 style="color:#F63366;font-size:24px;">Want to know more? Send us message below:</h1>', unsafe_allow_html=True)
+	# st.markdown(f'<h1 style="color:#F63366;font-size:24px;">Want to know more? Send us message below:</h1>', unsafe_allow_html=True)
 
-	useremail = st.text_input("Please insert your email")
-	message = st.text_area("Please insert your info and message")
-	submit = st.button("mail your message")
+	# useremail = st.text_input("Please insert your email")
+	# message = st.text_area("Please insert your info and message")
+	# submit = st.button("mail your message")
 
-	if submit:
-		if not useremail:
-			st.warning("Please insert your email address")
-		if not message:
-			st.warning("Please insert your message")
+	# if submit:
+	# 	if not useremail:
+	# 		st.warning("Please insert your email address")
+	# 	if not message:
+	# 		st.warning("Please insert your message")
 
-		else:
+	# 	else:
 
-			st.success("Your message has been sent, thank you!")
-			email(useremail,message)
+	# 		st.success("Your message has been sent, thank you!")
+	# 		email(useremail,message)
 		
