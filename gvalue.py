@@ -26,8 +26,9 @@ def gvalue():
 	st.markdown(web,unsafe_allow_html=True)
 	st.header('ETFE cushion G value')
 	w,h = 400,300
-	slider_val = st.slider("G value through ETFE cushions skylight, slide the bar and see how it differ looking at the pictures", min_value=0.2, max_value=0.95, value=(0.5))
+	slider_val = st.slider("G value through ETFE cushions skylight, slide the bar and see how sky view differs by comparing pictures", min_value=0.2, max_value=0.95, value=(0.5))
 	g = slider_val
+	remark(g)
 	col1, col2 = st.columns(2)
 	with col2:
 
@@ -40,42 +41,77 @@ def gvalue():
 	with col1:
 	
 		img = Image.open('images/sky.jpg')
-		if g <= 0.35:
-			g = g/4
+		if 0.25 < g <= 0.33:
+
+			g1 = g/4
 			
-			draw = ImageDraw.Draw(img)
-			step =3
-			for n in range(step,w,step):
-					for y in range(step,h,step):
-						draw.regular_polygon(((n),(y),1), 6, rotation=0, fill="#A9A9A9", outline="silver")
-			imgfrit = Image.new("RGB",(w,h), "#A9A9A9")
-			imgsk=Image.blend(imgfrit,img,(g))
+			# draw = ImageDraw.Draw(img)
+			# step =3
+			# for n in range(step,w,step):
+			# 		for y in range(step,h,step):
+			# 			draw.regular_polygon(((n),(y),1), 6, rotation=0, fill="#A9A9A9", outline="silver")
+			imgfrit = Image.new("RGB",(w,h), "#808080")
+			imgsk=Image.blend(imgfrit,img,(g1))
 
 			return st.image(imgsk,
 				caption=f'G value = {g} (Typical viewer standing below skylight)',
 				use_column_width=100)
 
-	
+		elif 0.2<=g <= 0.25:
+			g1 = 0.98
+			imgfrit = Image.new("RGB",(w,h), "#808080")
+			imgsk=Image.blend(img,imgfrit,(g1))
+
+			return st.image(imgsk,
+				caption=f'G value = {g} (Typical viewer standing below skylight)',
+				use_column_width=100)
+
 			
-						
+		elif g > 0.85:
+			 
+			img_no_frits = Image.open('images/sky.jpg')
+			imgfrit = Image.new("RGB",(w,h), "#808080")
+			imgsk=Image.blend(imgfrit,img,(g))
+			return st.image(imgsk,
+				caption=f'G value = {g} (Typical viewer standing below skylight)',
+				use_column_width=100)
+			
+
+
 		
 
 
 		else:
+			g1 = 0.8*g
 			draw = ImageDraw.Draw(img)
 			step =3
-			for n in range(step,w,step):
-					for y in range(step,h,step):
-						draw.regular_polygon(((n),(y),1), 6, rotation=0, fill="silver", outline="silver")
-			imgfrit = Image.new("RGB",(w,h), "silver")
-			imgsk=Image.blend(imgfrit,img,(g))
+			# for n in range(step,w,step):
+			# 		for y in range(step,h,step):
+			# 			draw.regular_polygon(((n),(y),1), 6, rotation=0, fill="silver", outline="silver")
+			imgfrit = Image.new("RGB",(w,h), "#808080")
+			imgsk=Image.blend(imgfrit,img,(g1))
 
 			return st.image(imgsk, 
 				caption=f'G value = {g}(Typical viewer standing below skylight)',
 				use_column_width=100)
-	
+		
 
 
+
+def remark(g):
+
+	if 0.25< g <= 0.33:
+		st.warning("ETFE cushion can achieve this G value range,but sky view goes to opaqueness ")
+	elif 0.2<= g <= 0.25:
+		st.warning("ETFE cushion can achieve this G value range,opaque(colored ETFE or colored & fritted), it remains translucent though ")	
+	elif 0.33< g < 0.55:
+		st.success("Well done!, this is within optimal G value range and sky view ")
+	elif g == 0.2:
+		st.warning("Typically, this is the lowest G value achievable by ETFE cushion")
+	elif g==0.95:
+		st.warning("Typically, this is the highest possible G value on clear foil ")
+	else:
+		st.warning("This is within quite high amount of sun radiation range unless you want that(e.g, living in Canada)")
 
 
 
@@ -97,25 +133,25 @@ def gvalue():
 
 # 		st.success("Your message has been sent, thank you!")
 # 		email(useremail,message)
-		
+	
+
+
+
+			
+			
 
 
 
 				
+			# with col1:
 				
+			# 	skyfrit = imgsk.show()
 
 
-
-					
-				# with col1:
-					
-				# 	skyfrit = imgsk.show()
-
-
-				# with col2:
-					
-				# 	skyview = Image.open('images/sky.jpg')
-				# 	st.image(skyview,
-				# 		 caption='Natural sky view' ,
-				# 		 use_column_width=150)
+			# with col2:
+				
+			# 	skyview = Image.open('images/sky.jpg')
+			# 	st.image(skyview,
+			# 		 caption='Natural sky view' ,
+			# 		 use_column_width=150)
 
