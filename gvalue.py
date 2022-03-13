@@ -17,14 +17,7 @@ from PIL import ImageDraw
 
 def gvalue():
 
-	logo = Image.open('images/logo360_s.png')
-
-	st.image(logo,
-		 caption='Welcome to fabrix360 free source info | fabrix360.com',
-		 use_column_width=150)
-	web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
-	st.markdown(web,unsafe_allow_html=True)
-	st.header('ETFE cushion G value')
+	
 	w,h = 400,300
 	slider_val = st.slider("G value through ETFE cushions skylight, slide the bar and see how sky view differs by comparing pictures", min_value=0.2, max_value=0.95, value=(0.5))
 	g = slider_val
