@@ -23,7 +23,7 @@ def etfe():
 		 caption='Typical ETFE Skylight for Enclosed and Partially Enclosed Buildings and Structures-Arched Roofs, Height < 33m , Rise-to-Span ration < 0.2',
 		 use_column_width=150)
 
-	st.write("Calculating ETFE film thickness for given cushion width start by changing cushion width(m) on below slider bar and insert initial film thicknesses, you can fill any thickness but standard available thicknesses are 100, 200, 250 & 300 microns:")
+	st.write("Calculating ETFE film thickness for given cushion width start by changing cushion width(m) on below slider bar and then change initial film thicknesses outer and inner, try for learning to adopt any thickness between 100 to 300 microns but standard market available thicknesses are 100, 200, 250 & 300 microns:")
 
 	
 
