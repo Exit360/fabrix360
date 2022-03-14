@@ -29,8 +29,8 @@ def etfe():
 
 	slider_val = st.slider("Cushion width(m):", min_value=1.0, max_value=4.5, value=(1.0))
 	cushion_width= slider_val
-	etfe_thick_outer = float(st.text_input("Insert initial guess for outer ETFE film thickness (microns):", value=250))
-	etfe_thick_inner = float(st.text_input("Insert initial guess for inner ETFE film thickness(microns):", value=250))
+	etfe_thick_outer = st.slider("Initial guess for outer ETFE layer thickness in microns:", min_value=100, max_value=300, value=(250))
+	etfe_thick_inner = st.slider("Initial guess for inner ETFE layer thickness in microns:", min_value=100, max_value=300, value=(250))
 	
    
 
