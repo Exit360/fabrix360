@@ -64,15 +64,19 @@ def main():
 
     if choice == "Home":
         logo = Image.open('images/logo360_s.png')
-        
+        tools = Image.open('images/toolbox.jpg')
         st.image(logo,
          caption='Project Management,Design,Marketing | fabrix360.com',
          use_column_width=150)
         web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
         st.markdown(web,unsafe_allow_html=True)
         st.header('Home')
+        st.image(tools,
+         caption='ETFE and Membrane Toolbox developed by fabrix360.com',
+         use_column_width=150)
+
         
-        Home= """Welcome to fabrixhub developed by fabrix360. This website is free learning source for all whom interested in tensile structure membrane or ETFE air filled cushions without the need to be specialized in this field. 
+        Home= """Welcome to fabrixhub developed by fabrix360. This website is free learning source intended as toolbox for all whom interested in tensile structure membrane or ETFE air filled cushions without the need to be specialized in this field. 
                  <h5>Site content menu(toolbox):</h5>
         Please refer to site content menu at the sidebar. The aim is to carry on adding tools to form a kind of toolbox for whom interested to know more about all kinds of membrane, tools developed to be easily utilized by all (i.e. you do not need to be specialized or having special credential to use the tools or understand the contents)
         We hope you will find it insightful, if so and in order to encourage us to carry on adding more tools, please follow us on linkden, drop a message or like, and feel free to re-post it too. If you have any further questions, please do not hesitate to contact us on the link above. 
@@ -85,11 +89,15 @@ def main():
         
     elif choice == "About us":
         logo = Image.open('images/logo360_s.png')
+        drill = Image.open('images/drill.jpg')
         st.image(logo,
          caption='Project Management,Design,Marketing | fabrix360.com',
          use_column_width=150)
         web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
         st.markdown(web,unsafe_allow_html=True)
+        st.image(drill,
+         caption='fabrixhub developed by fabrix360.com',
+         use_column_width=150)
         st.header('About us')
         st.header('Tensile structure & ETFE skylight hub in Middle East')
         about = """ fabrix360, Middle East based, is wide scope expert composed of conglomerate of elite expats Engineers and Project Managers with vast experience in tensile structures and air filled cushions(ETFE), robust and real field experience with iconic projects undertaken in Middle East and Worldwide in the last 2 decades.
