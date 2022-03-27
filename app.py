@@ -10,6 +10,7 @@ import smtplib
 from email.message import EmailMessage
 import email.message
 from PIL import Image
+from etfeseo import etfeseo
 
 
 # logo = Image.open('images/logo360_s.png')
@@ -20,7 +21,7 @@ from PIL import Image
 def main():
     ### simple login ###
     
-    menue = ["Home","ETFE skylight","ETFE cushion G value","Membrane fire behavior", "About us"]
+    menue = ["Home","ETFE skylight","ETFE cushion G value","Membrane fire behavior","ETFE Digital Geography","About us"]
     choice = st.sidebar.selectbox("Site content menue(toolbox)", menue)
 
     if choice == "ETFE skylight":
@@ -53,16 +54,20 @@ def main():
 
     elif choice =="Membrane fire behavior":
         logo = Image.open('images/logo360_s.png')
+        alarm = Image.open('images/fire.png')
         st.image(logo,
          caption='Project Management,Design,Marketing | fabrix360.com',
          use_column_width=150)
         web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
         st.markdown(web,unsafe_allow_html=True)
         st.header('Membrane fire behavior')
+        st.image(alarm,
+        caption='fabrixhub developed by fabrix360.com',
+        use_column_width=150)
         st.warning("Disclaimer:The contents of this web applications are for pure learning purposes and cannot be used commercially or firmly. If you seek firm information please contact us or contact your expert")
         fire()
 
-    if choice == "Home":
+    elif choice == "Home":
         logo = Image.open('images/logo360_s.png')
         tools = Image.open('images/toolbox.jpg')
         st.image(logo,
@@ -87,6 +92,33 @@ def main():
         st.markdown(linkden,unsafe_allow_html=True)
         st.warning("Disclaimer:The contents of this web applications are for pure learning purposes and cannot be used commercially or firmly. If you seek firm information please contact us or contact your expert")
         
+
+    elif choice == "ETFE Digital Geography":
+        logo = Image.open('images/logo360_s.png')
+        google = Image.open('images/google.png')
+        st.image(logo,
+         caption='Project Management,Design,Marketing | fabrix360.com',
+         use_column_width=150)
+        web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
+        st.markdown(web,unsafe_allow_html=True)
+        st.header('ETFE Digital Geography')
+        st.image(google,
+         caption='fabrixhub developed by fabrix360.com',
+         use_column_width=150)
+       
+        geography = """ The below drop down menue automate key words on google search 
+        engine. Once you select the key words it shows the first 20 url/website results as they are ranking exactly in google search engine without the bias of google Ads as of todate.
+        Its interesting to know how ranking is without Ads. 
+        Some results are a bit wierd,nevermind only google knows why!.Nevertheless whats important is that results are how google ranks up to first 20 results from google search engine as they are. Try it here and on your browser, results shall be same without Ads.""" 
+        st.markdown(geography, unsafe_allow_html=True)
+        st.warning("""This website tools are for sole educational purposes, do not use them
+            commercially or firmly. If the resulted url/website is not safe skip it""")
+        etfeseo()
+
+
+
+
+
     elif choice == "About us":
         logo = Image.open('images/logo360_s.png')
         drill = Image.open('images/drill.jpg')
@@ -95,10 +127,11 @@ def main():
          use_column_width=150)
         web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
         st.markdown(web,unsafe_allow_html=True)
+        st.header('About us')
         st.image(drill,
          caption='fabrixhub developed by fabrix360.com',
          use_column_width=150)
-        st.header('About us')
+        
         st.header('Tensile structure & ETFE skylight hub in Middle East')
         about = """ fabrix360, Middle East based, is wide scope expert composed of conglomerate of elite expats Engineers and Project Managers with vast experience in tensile structures and air filled cushions(ETFE), robust and real field experience with iconic projects undertaken in Middle East and Worldwide in the last 2 decades.
 
