@@ -106,10 +106,10 @@ def main():
          caption='fabrixhub developed by fabrix360.com',
          use_column_width=150)
        
-        geography = """ The below drop down menue automate key words on google search 
-        engine. Once you select the key words it shows the first 20 url/website results as they are ranking exactly in google search engine without the bias of google Ads as of todate.
+        geography = """ The below drop down menue automates key words on google search 
+        engine. Once you select the key words it shows the unfiltered first 20 url/website @.com results as they are ranking exactly in google search engine without the bias of google Ads or filters as of today in english language.
         Its interesting to know how ranking is without Ads. 
-        Some results are a bit wierd,nevermind only google knows why!.Nevertheless whats important is that results are how google ranks up to first 20 results from google search engine as they are. Try it here and on your browser, results shall be same without Ads.""" 
+        Some results are a bit wierd,nevermind only google knows why!.Nevertheless whats important is that results are how google ranks up to first 20 results from google search engine as they are. Try it here and on your browser(without adding any filters), results shall be same without Ads and filters.""" 
         st.markdown(geography, unsafe_allow_html=True)
         st.warning("""This website tools are for sole educational purposes, do not use them
             commercially or firmly. If the resulted url/website is not safe skip it""")

@@ -7,7 +7,7 @@ def getWordsFromURL(url):
 
 def etfeseo():
 	menue = ["Select Key Word","ETFE in Middle East","ETFE in Europe","ETFE in Africa", 
-	"ETFE in North America", "ETFE in South America","ETFE in Australia"]
+	"ETFE in USA", "ETFE in East Asia","ETFE in Australia"]
 	choice = st.selectbox("Select Geographic Area", menue)
 
 	if choice ==  "ETFE in Middle East":
@@ -26,14 +26,14 @@ def etfeseo():
 		q = "ETFE in Africa"
 		seo(q)
 
-	elif choice ==  "ETFE in North America":
+	elif choice ==  "ETFE in USA":
 
-		q = "ETFE in North America"
+		q = "ETFE in USA"
 		seo(q)
 
-	elif choice ==  "ETFE in South America":
+	elif choice ==  "ETFE in East Asia":
 
-		q = "ETFE in South America"
+		q = "ETFE in East Asia"
 		seo(q)
 
 	elif choice ==  "ETFE in Australia":
