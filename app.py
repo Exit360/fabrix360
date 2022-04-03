@@ -11,6 +11,9 @@ from email.message import EmailMessage
 import email.message
 from PIL import Image
 from etfeseo import etfeseo
+from streamlit_option_menu import option_menu
+
+
 
 
 # logo = Image.open('images/logo360_s.png')
@@ -20,9 +23,22 @@ from etfeseo import etfeseo
 
 def main():
     ### simple login ###
+    with st.sidebar:
+
+        choice = option_menu("Toolbox Menu", ["Home", "ETFE skylight","ETFE cushion G value","Membrane fire behavior","ETFE Digital Geography","About us"], 
+            icons=['house', 'sun','thermometer-sun','exclamation-triangle-fill','google','emoji-smile'], menu_icon="cast", default_index=0, 
+              styles={
+        "container": {"padding": "0!important", "background-color": "#fafafa"},
+        "icon": {"color": "orange", "font-size": "14px"}, 
+        "nav-link": {"font-size": "14px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
+        "nav-link-selected": {"background-color": "green"},
+         })
+        choice
     
-    menue = ["Home","ETFE skylight","ETFE cushion G value","Membrane fire behavior","ETFE Digital Geography","About us"]
-    choice = st.sidebar.selectbox("Site content menue(toolbox)", menue)
+    # menue = ["Home","ETFE skylight","ETFE cushion G value","Membrane fire behavior","ETFE Digital Geography","About us"]
+    # choice = st.sidebar.selectbox("Site content menue(toolbox)", menue)
+    
+
 
     if choice == "ETFE skylight":
         logo = Image.open('images/logo360_s.png')

@@ -94,17 +94,17 @@ def gvalue():
 def remark(g):
 
 	if 0.25< g <= 0.33:
-		st.warning("ETFE cushion can achieve this G value range,but sky view goes to opaqueness ")
+		st.info("ETFE cushion can achieve this G value range,but sky view goes to opaqueness ")
 	elif 0.2<= g <= 0.25:
-		st.warning("ETFE cushion can achieve this G value range,opaque(colored ETFE or colored & fritted), it remains translucent though ")	
+		st.info("ETFE cushion can achieve this G value range,opaque(colored ETFE or colored & fritted), it remains translucent though ")	
 	elif 0.33< g < 0.55:
 		st.success("Well done!, this is within optimal G value range and sky view ")
 	elif g == 0.2:
-		st.warning("Typically, this is the lowest G value achievable by ETFE cushion")
+		st.info("Typically, this is the lowest G value achievable by ETFE cushion")
 	elif g==0.95:
-		st.warning("Typically, this is the highest possible G value on clear foil ")
+		st.info("Typically, this is the highest possible G value on clear foil ")
 	else:
-		st.warning("This is within quite high amount of sun radiation range unless you want that(e.g, living in Canada)")
+		st.info("This is within quite high amount of sun radiation range unless you want that(e.g, living in Canada)")
 
 
 

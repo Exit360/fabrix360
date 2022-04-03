@@ -1,6 +1,13 @@
+from bs4 import BeautifulSoup
+
+import google
 from googlesearch import search
 import streamlit as st
 import re
+
+
+
+
 
 def getWordsFromURL(url):
     return re.compile(r'[\:/?=\-&]+',re.UNICODE).split(url)
@@ -54,6 +61,7 @@ def seo(q):
 							if "www.gulfshade.com" not in words:
 								if "structurflex" not in words:
 									st.markdown(url)
+	
 
 						
 						
