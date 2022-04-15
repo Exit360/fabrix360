@@ -11,6 +11,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 from PIL import Image
 from mail import email
+from Uvalue import uvalue 
 
 
 
@@ -36,6 +37,7 @@ def etfe():
 
 	# Every form must have a submit button.
 	checkbox_val = st.checkbox("Calculate")
+	L = 2 * cushion_width * 0.12 
 	if checkbox_val:
 
 		h2 = 0.12* cushion_width*1000
@@ -50,6 +52,8 @@ def etfe():
 
 		stress_outer= wind_outer * R/(2*tp_outer)
 		stress_inner = wind_inner * R/(2*tp_inner)
+		
+		
 		# st.write(round(stress_outer,2), " MPa Actual outer layer stress")
 		# st.write(round(stress_inner,2), "MPa Actual inner stress")
 
@@ -68,6 +72,12 @@ def etfe():
 			 
 	
 	draw_cushion(etfe_thick_outer,etfe_thick_inner,cushion_width)
+	st.info('Note below the approximate U value, try to change ETFE thickness it wont change as this has no impact but when air gap increases the U value increases')
+	
+	st.markdown(f'@Max cushion air gap thickness = {round(L,2)} m ')
+	uvalue(L)
+	st.warning("This approximation is for Winter season U value, Summer one would be a bit higher, always involve HVAC expert and ETFE expert to coordinate this")
+	
 
 
 def draw_cushion(etfe_thick_outer,etfe_thick_inner,cushion_width):
@@ -88,14 +98,20 @@ def draw_cushion(etfe_thick_outer,etfe_thick_inner,cushion_width):
 		text=[f"Inner layer={etfe_thick_inner} microns",
 			  f"Outer layer={etfe_thick_outer} microns",
 			   ],
-		mode="text",
+		mode="text"
+
 	))
+
+
+
 
 
 	# Update axes properties
 	fig.update_xaxes(
 		range=[0, k],
 		zeroline=False,
+
+
 	)
 
 	fig.update_yaxes(
@@ -117,7 +133,12 @@ def draw_cushion(etfe_thick_outer,etfe_thick_inner,cushion_width):
 				path=f"M 0,1 Q {k1},{k2} {k},1",
 				line_color="RoyalBlue",)])
 
+
 	st.plotly_chart(fig)
+	
+	
+
+
 
 	# st.markdown(f'<h1 style="color:#F63366;font-size:24px;">Want to know more? Send us message below:</h1>', unsafe_allow_html=True)
 
