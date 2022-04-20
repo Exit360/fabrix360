@@ -12,6 +12,7 @@ import email.message
 from PIL import Image
 from etfeseo import etfeseo
 from streamlit_option_menu import option_menu
+from Uvalue import uvalue
 
 
 
@@ -22,8 +23,8 @@ def main():
     ### simple login ###
     with st.sidebar:
 
-        choice = option_menu("Toolbox Menu", ["Home", "ETFE skylight","ETFE cushion G value","Membrane fire behavior","ETFE Digital Geography","About us"], 
-            icons=['house', 'sun','thermometer-sun','exclamation-triangle-fill','google','emoji-smile'], menu_icon="cast", default_index=0, 
+        choice = option_menu("Toolbox Menu", ["Home", "ETFE skylight","ETFE cushion G value","ETFE cushion U value","Membrane fire behavior","ETFE Digital Geography","About us"], 
+            icons=['house', 'sun','thermometer-sun','thermometer-sun','exclamation-triangle-fill','google','emoji-smile'], menu_icon="cast", default_index=0, 
               styles={
         "container": {"padding": "0!important", "background-color": "#fafafa"},
         "icon": {"color": "orange", "font-size": "14px"}, 
@@ -64,6 +65,17 @@ def main():
         st.header('ETFE cushion G value')
         st.warning("Disclaimer:The contents of this web applications are for pure learning purposes and cannot be used commercially or firmly. If you seek firm information please contact us or contact your expert")
         gvalue()
+
+    elif choice == "ETFE cushion U value":
+        logo = Image.open('images/logo360_s.png')
+        st.image(logo,
+         caption='Project Management,Design,Marketing | fabrix360.com',
+         use_column_width=150)
+        web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
+        st.markdown(web,unsafe_allow_html=True)
+        st.header('ETFE cushion U value')
+        st.warning("Disclaimer:The contents of this web applications are for pure learning purposes and cannot be used commercially or firmly. If you seek firm information please contact us or contact your expert")
+        uvalue()
 
     elif choice =="Membrane fire behavior":
         logo = Image.open('images/logo360_s.png')

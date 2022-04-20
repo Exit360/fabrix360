@@ -72,11 +72,7 @@ def etfe():
 			 
 	
 	draw_cushion(etfe_thick_outer,etfe_thick_inner,cushion_width)
-	st.info('Note below the approximate U value, try to change ETFE thickness it wont change as this has no impact but when air gap increases the U value increases')
 	
-	st.markdown(f'@Max cushion air gap thickness = {round(L,2)} m ')
-	uvalue(L)
-	st.warning("This approximation is for Winter season U value, Summer one would be a bit higher, always involve HVAC expert and ETFE expert to coordinate this")
 	
 
 
@@ -105,19 +101,20 @@ def draw_cushion(etfe_thick_outer,etfe_thick_inner,cushion_width):
 
 
 
-
 	# Update axes properties
 	fig.update_xaxes(
 		range=[0, k],
-		zeroline=False,
+		zeroline=False
+
 
 
 	)
 
 	fig.update_yaxes(
 		range=[0, 2],
-		zeroline=False,
+		zeroline=True,
 	)
+
 
 	# Add shapes
 	fig.update_layout(
@@ -137,7 +134,7 @@ def draw_cushion(etfe_thick_outer,etfe_thick_inner,cushion_width):
 	st.plotly_chart(fig)
 	
 	
-
+	
 
 
 	# st.markdown(f'<h1 style="color:#F63366;font-size:24px;">Want to know more? Send us message below:</h1>', unsafe_allow_html=True)
