@@ -27,8 +27,8 @@ def uvalue():
 
 	
 
-	T1 = st.slider("Heating source temp Degrees Celsius:", min_value=20, max_value=50, value=(40))
-	T2 = st.slider("Cooling source temp Degrees Celsius:", min_value=-15, max_value=20, value=(0))
+	T1 = st.slider("Heating source temp Degrees Celsius:", min_value=20, max_value=50, value=(45))
+	T2 = st.slider("Cooling source temp Degrees Celsius:", min_value=-15, max_value=25, value=(20))
 	L = st.slider("Thickness of cushion (m):", min_value=0.25, max_value=1.08, value=(0.5))
 	H = st.slider("Width of cushion (m):", min_value=1.0, max_value=4.5, value=(3.0))
 	angle = st.slider("Angle of inclination degrees:", min_value=0, max_value=180, value=(180))
