@@ -1,9 +1,11 @@
 
 
+from bs4 import BeautifulSoup 
 import google
 from googlesearch import search
 import streamlit as st
 import re
+
 
 
 
@@ -50,8 +52,9 @@ def etfeseo():
 
 
 def seo(q):
+	# for url in search('"Breaking Code" WordPress blog', stop=20):
 
-	for url in search(q,tld='com', lang='en', num=20, stop=20, pause=2.0):
+	for url in search(q, stop=20):
 		words = getWordsFromURL(url)
 		if "uaeyellowpagesonline.com" not in words:
 			if "www.constructionweekonline.com" not in words:
