@@ -10,7 +10,7 @@ import smtplib
 from email.message import EmailMessage
 import email.message
 from PIL import Image
-from etfeseo import etfeseo
+# from etfeseo import etfeseo
 from streamlit_option_menu import option_menu
 from Uvalue import uvalue
 
