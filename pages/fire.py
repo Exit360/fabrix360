@@ -17,6 +17,8 @@ caption='Project Management,Design,Marketing | fabrix360.com',
 use_column_width=150)
 web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
 st.markdown(web,unsafe_allow_html=True)
+home = '<span style="font-style: italic;color: #000080;"><h6><a href="https://fabrixhub.onrender.com/">Home</a></h6></span>'
+st.markdown(home,unsafe_allow_html=True)
 st.header('Membrane fire behavior')
 st.image(alarm,
 caption='fabrixhub developed by fabrix360.com',
