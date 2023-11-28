@@ -19,7 +19,7 @@ from Uvalue import uvalue
 
 def etfe():
 
-	skylight = Image.open('images/skylight_s.png')
+	skylight = Image.open('images/cushion-app_cost1.png')
 	st.image(skylight,
 		 caption='Typical ETFE Skylight for Enclosed and Partially Enclosed Buildings and Structures-Arched Roofs, Height < 33m , Rise-to-Span ration < 0.2 , snow load is not considered',
 		 use_column_width=150)

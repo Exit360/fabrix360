@@ -11,7 +11,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 from PIL import Image
 
-from Uvalue import uvalue 
+
 
 
 logo = Image.open('images/logo360_s.png')
@@ -34,7 +34,7 @@ st.warning("Disclaimer:The contents of this web applications are for pure learni
 
 def etfe():
 
-	skylight = Image.open('images/skylight_s.png')
+	skylight = Image.open('images/cushion-app_cost1.png')
 	st.image(skylight,
 		 caption='Typical ETFE Skylight for Enclosed and Partially Enclosed Buildings and Structures-Arched Roofs, Height < 33m , Rise-to-Span ration < 0.2 , snow load is not considered',
 		 use_column_width=150)

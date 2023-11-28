@@ -1,6 +1,7 @@
 from etfe import etfe
 from gvalue import gvalue
 from fire import fire
+from cost import cost
 import streamlit as st
 from termcolor import colored, cprint
 import sqlite3
@@ -19,12 +20,13 @@ from Uvalue import uvalue
 
 
 
+
 def main():
     ### simple login ###
     with st.sidebar:
 
-        choice = option_menu("Toolbox Menu", ["Home", "ETFE skylight","ETFE cushion G value","ETFE cushion U value","Membrane fire behavior","About us"], 
-            icons=['house', 'sun','thermometer-sun','thermometer-sun','exclamation-triangle-fill','emoji-smile'], menu_icon="cast", default_index=0, 
+        choice = option_menu("Toolbox Menu", ["Home", "ETFE skylight","ETFE cushion G value","ETFE cushion U value","Membrane fire behavior","ETFE cost $","About us"], 
+            icons=['house', 'sun','thermometer-sun','thermometer-sun','exclamation-triangle-fill',':100:','emoji-smile'], menu_icon="cast", default_index=0, 
               styles={
         "container": {"padding": "0!important", "background-color": "#fafafa"},
         "icon": {"color": "orange", "font-size": "14px"}, 
@@ -102,7 +104,7 @@ def main():
 
     elif choice == "Home":
         logo = Image.open('images/logo360_s.png')
-        tools = Image.open('images/toolbox.jpg')
+        tools = Image.open('images/cushion-app_home.png')
         st.image(logo,
          caption='Project Management,Design,Marketing | fabrix360.com',
          use_column_width=150)
@@ -187,8 +189,18 @@ We bring to our clients reliable, immediate productive and experienced resources
         st.warning("Disclaimer:The contents of this web applications are for pure learning purposes and cannot be used commercially or firmly. If you seek firm information please contact us or contact your expert")
 
 
+    elif choice == "ETFE cost $":
+        logo = Image.open('images/logo360_s.png')
+        st.image(logo,
+         caption='Project Management,Design,Marketing | fabrix360.com',
+         use_column_width=150)
+        web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
+        st.markdown(web,unsafe_allow_html=True)
+        home = '<span style="font-style: italic;color: #000080;"><h6><a href="https://fabrixhub.onrender.com/">Home</a></h6></span>'
+        st.markdown(home,unsafe_allow_html=True)
 
-    
+        cost()
+
 
 if __name__ == '__main__':
     main()
