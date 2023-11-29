@@ -133,8 +133,9 @@ def draw_cushion(etfe_thick_outer,etfe_thick_inner,cushion_width):
 
 	st.plotly_chart(fig)
 	
-	
-	
+
+web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
+st.markdown(web,unsafe_allow_html=True)
 
 
 	# st.markdown(f'<h1 style="color:#F63366;font-size:24px;">Want to know more? Send us message below:</h1>', unsafe_allow_html=True)

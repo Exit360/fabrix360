@@ -23,17 +23,17 @@ from Uvalue import uvalue
 
 def main():
     ### simple login ###
-    with st.sidebar:
+    # with st.sidebar:
 
-        choice = option_menu("Toolbox Menu", ["Home", "ETFE skylight","ETFE cushion G value","ETFE cushion U value","Membrane fire behavior","ETFE cost $","About us"], 
-            icons=['house', 'sun','thermometer-sun','thermometer-sun','exclamation-triangle-fill',':100:','emoji-smile'], menu_icon="cast", default_index=0, 
-              styles={
-        "container": {"padding": "0!important", "background-color": "#fafafa"},
-        "icon": {"color": "orange", "font-size": "14px"}, 
-        "nav-link": {"font-size": "14px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
-        "nav-link-selected": {"background-color": "green"},
-         })
-        choice
+    choice = option_menu("Toolbox Menu", ["Home", "ETFE skylight","ETFE cushion G value","ETFE cushion U value","Membrane fire behavior","ETFE cost $","About us"], 
+        icons=['house', 'sun','umbrella-fill','thermometer-sun','exclamation-triangle-fill','coin','emoji-smile'], menu_icon="cast", default_index=0, 
+          styles={
+    "container": {"padding": "0!important"},
+    "icon": {"color": "orange", "font-size": "14px"}, 
+    "nav-link": {"font-size": "14px", "text-align": "left", "margin":"0px", "--hover-color": "#d3d3d3"},
+    "nav-link-selected": {"background-color": "green"},
+     }, orientation="horizontal")
+    choice
     
   
     
@@ -45,12 +45,11 @@ def main():
         st.image(logo,
          caption='Project Management,Design,Marketing | fabrix360.com',
          use_column_width=150)
-        web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
-        st.markdown(web,unsafe_allow_html=True)
-        home = '<span style="font-style: italic;color: #000080;"><h6><a href="https://fabrixhub.onrender.com/">Home</a></h6></span>'
-        st.markdown(home,unsafe_allow_html=True)
+        st.header('ETFE cushion foil calculations')
+     
+        
 
-        st.header('ETFE skylight')
+        
         st.warning("Disclaimer:The contents of this web applications are for pure learning purposes and cannot be used commercially or firmly. If you seek firm information please contact us or contact your expert")
         
 
@@ -64,10 +63,10 @@ def main():
         st.image(logo,
          caption='Project Management,Design,Marketing | fabrix360.com',
          use_column_width=150)
-        web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
-        st.markdown(web,unsafe_allow_html=True)
-        home = '<span style="font-style: italic;color: #000080;"><h6><a href="https://fabrixhub.onrender.com/">Home</a></h6></span>'
-        st.markdown(home,unsafe_allow_html=True)
+        # web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
+        # st.markdown(web,unsafe_allow_html=True)
+        # home = '<span style="font-style: italic;color: #000080;"><h6><a href="https://fabrixhub.onrender.com/">Home</a></h6></span>'
+        # st.markdown(home,unsafe_allow_html=True)
         st.header('ETFE cushion G value')
         st.warning("Disclaimer:The contents of this web applications are for pure learning purposes and cannot be used commercially or firmly. If you seek firm information please contact us or contact your expert")
         gvalue()
@@ -77,10 +76,10 @@ def main():
         st.image(logo,
          caption='Project Management,Design,Marketing | fabrix360.com',
          use_column_width=150)
-        web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
-        st.markdown(web,unsafe_allow_html=True)
-        home = '<span style="font-style: italic;color: #000080;"><h6><a href="https://fabrixhub.onrender.com/">Home</a></h6></span>'
-        st.markdown(home,unsafe_allow_html=True)
+        # web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
+        # st.markdown(web,unsafe_allow_html=True)
+        # home = '<span style="font-style: italic;color: #000080;"><h6><a href="https://fabrixhub.onrender.com/">Home</a></h6></span>'
+        # st.markdown(home,unsafe_allow_html=True)
         st.header('ETFE cushion U value')
         st.warning("Disclaimer:The contents of this web applications are for pure learning purposes and cannot be used commercially or firmly. If you seek firm information please contact us or contact your expert")
         uvalue()
@@ -91,10 +90,10 @@ def main():
         st.image(logo,
          caption='Project Management,Design,Marketing | fabrix360.com',
          use_column_width=150)
-        web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
-        st.markdown(web,unsafe_allow_html=True)
-        home = '<span style="font-style: italic;color: #000080;"><h6><a href="https://fabrixhub.onrender.com/">Home</a></h6></span>'
-        st.markdown(home,unsafe_allow_html=True)
+        # web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
+        # st.markdown(web,unsafe_allow_html=True)
+        # home = '<span style="font-style: italic;color: #000080;"><h6><a href="https://fabrixhub.onrender.com/">Home</a></h6></span>'
+        # st.markdown(home,unsafe_allow_html=True)
         st.header('Membrane fire behavior')
         st.image(alarm,
         caption='fabrixhub developed by fabrix360.com',
@@ -108,9 +107,8 @@ def main():
         st.image(logo,
          caption='Project Management,Design,Marketing | fabrix360.com',
          use_column_width=150)
-        web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
-        st.markdown(web,unsafe_allow_html=True)
-        st.header('Home')
+       
+        # st.header('Home')
         st.image(tools,
          caption='ETFE and Membrane Toolbox developed by fabrix360.com',
          use_column_width=150)
@@ -118,15 +116,17 @@ def main():
         
         Home= """Welcome to fabrixhub developed by fabrix360. This website is free learning source intended as toolbox for all whom interested in tensile structure membrane or ETFE air filled cushions without the need to be specialized in this field. 
                  <h5>Site content menu(toolbox):</h5>
-        Please refer to site content menu at the sidebar. The aim is to carry on adding tools to form a kind of toolbox for whom interested to know more about all kinds of membrane, tools developed to be easily utilized by all (i.e. you do not need to be specialized or having special credential to use the tools or understand the contents)
+        Enjoy trying the site tools content menu at the sidebar/toolbox menue header. The aim is to carry on adding tools to form a kind of toolbox for whom interested to know more about all kinds of membrane, tools developed to be easily utilized by all (i.e. you do not need to be specialized or having special credential to use the tools or understand the contents)
         We hope you will find it insightful, if so and in order to encourage us to carry on adding more tools, please follow us on linkden, drop a message or like, and feel free to re-post it too. If you have any further questions, please do not hesitate to contact us on the link above. 
         Reach our linkden profile at below link:"""
         
         st.markdown(Home,unsafe_allow_html=True)
+       
+        st.warning("Disclaimer:The contents of this web applications are for pure learning purposes and cannot be used commercially or firmly. If you seek firm information please contact us or contact your expert")
+        web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
+        st.markdown(web,unsafe_allow_html=True)
         linkden = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.linkedin.com/in/fabrix-threesixty-33bb1b165/">Follow us on linkden</a></h6></span>'
         st.markdown(linkden,unsafe_allow_html=True)
-        st.warning("Disclaimer:The contents of this web applications are for pure learning purposes and cannot be used commercially or firmly. If you seek firm information please contact us or contact your expert")
-        
 
   
 
@@ -140,8 +140,8 @@ def main():
         st.image(logo,
          caption='Project Management,Design,Marketing | fabrix360.com',
          use_column_width=150)
-        web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
-        st.markdown(web,unsafe_allow_html=True)
+        # web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
+        # st.markdown(web,unsafe_allow_html=True)
         st.header('About us')
         st.image(drill,
          caption='fabrixhub developed by fabrix360.com',
@@ -187,17 +187,18 @@ We bring to our clients reliable, immediate productive and experienced resources
 
         st.markdown(about,unsafe_allow_html=True)
         st.warning("Disclaimer:The contents of this web applications are for pure learning purposes and cannot be used commercially or firmly. If you seek firm information please contact us or contact your expert")
-
+        web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
+        st.markdown(web,unsafe_allow_html=True)
 
     elif choice == "ETFE cost $":
         logo = Image.open('images/logo360_s.png')
         st.image(logo,
          caption='Project Management,Design,Marketing | fabrix360.com',
          use_column_width=150)
-        web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
-        st.markdown(web,unsafe_allow_html=True)
-        home = '<span style="font-style: italic;color: #000080;"><h6><a href="https://fabrixhub.onrender.com/">Home</a></h6></span>'
-        st.markdown(home,unsafe_allow_html=True)
+        # web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
+        # st.markdown(web,unsafe_allow_html=True)
+        # home = '<span style="font-style: italic;color: #000080;"><h6><a href="https://fabrixhub.onrender.com/">Home</a></h6></span>'
+        # st.markdown(home,unsafe_allow_html=True)
 
         cost()
 

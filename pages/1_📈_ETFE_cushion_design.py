@@ -10,6 +10,9 @@ import requests as req
 import plotly.graph_objects as go
 import plotly.express as px
 from PIL import Image
+from streamlit_option_menu import option_menu
+
+
 
 
 
@@ -19,11 +22,13 @@ logo = Image.open('images/logo360_s.png')
 st.image(logo,
  caption='Project Management,Design,Marketing | fabrix360.com',
  use_column_width=150)
+
 web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
 st.markdown(web,unsafe_allow_html=True)
 home = '<span style="font-style: italic;color: #000080;"><h6><a href="https://fabrixhub.onrender.com/">Home</a></h6></span>'
 st.markdown(home,unsafe_allow_html=True)
-st.header('ETFE skylight')
+
+
 st.warning("Disclaimer:The contents of this web applications are for pure learning purposes and cannot be used commercially or firmly. If you seek firm information please contact us or contact your expert")
 
 

@@ -25,6 +25,8 @@ def cost():
 	
 	st.warning("""ETFE construction cost depends on many factors assesed by ETFE specialist, this application advice is beleived to be on fair level/initial budgetary for educational purposes only and shall
 	not substitute firm analysis by specialist:""")
+
+	st.header('ETFE skylight construction cost')
 	
 
 	skylight = Image.open('images/cushion-app_cost1.png')
