@@ -12,6 +12,10 @@ import plotly.express as px
 from PIL import Image
 from mail import email
 from Uvalue import uvalue 
+from location import user
+import pygeoip
+from mail import emailme
+
 
 
 
@@ -88,13 +92,14 @@ def cost():
 						cost = round((1100 + x)*s*w)
 
 
-
+				res=user()
 						
-				email(person,cushion_width, span_of_cushion, no_of_layers, total_area,cost)
+				email(person,cushion_width, span_of_cushion, no_of_layers, total_area,cost,res)
+				emailme(person,cushion_width, span_of_cushion, no_of_layers, total_area,cost,res)
 				st.success('well done check your email for cost info')
 			else:
 				st.warning('insert your email above!')
 
 
 if __name__ == '__main__':
-    cost()
+	cost()

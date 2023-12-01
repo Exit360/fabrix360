@@ -8,3 +8,4 @@ requests==2.25.1
 streamlit==1.20.0
 streamlit_option_menu==0.3.2
 termcolor==1.1.0
+pygeoip==0.3.2
