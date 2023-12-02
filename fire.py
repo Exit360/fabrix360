@@ -9,8 +9,12 @@ import smtplib
 from email.message import EmailMessage
 import email.message
 from PIL import Image
+from location import user
+from mail import emailnote
 
 def fire():
+	res = user()
+	emailnote(res)
 	menue = ["Select The Membrane Kind","ETFE","PTFE","PVC"]
 	choice = st.selectbox("Select membrane kind", menue)
 	PTFE = """ <h3>PTFE fire behavior:</h3>
@@ -20,21 +24,21 @@ def fire():
 <p> Nevertheless, to quickly grasp the difference, imagine a fire burning brand test aiming to burn and consume identical samples of PTFE, PVC and ETFE. The ignition time of PTFE coated fiberglass is of much interest, it takes approximately 1 minute to start, and observation would be mere peeling of coating has started and it takes approximately 25 minutes to consume test sample comparing to approximately 3 minutes to consume same sample of PVC and few seconds to consume same sample of ETFE. Although PTFE coating itself is polymer too but since the time of ignition and progress of combustion is of enormous importance, the PTFE coated fiberglass stand out versus other kinds of membranes.</p>
 
 <p>However, it’s worth to mention that in terms of classification, the time or progress of combustion is not the main criteria, example on this reference to ASTM E108, a Class A conditions of classifications for a roof covering material must meet the following conditions when subjected to the particular class of fire tests:</p>
-   
-   <h5> At no time during or after the intermittent flame, spread of flame, or burning brand tests shall:</h5>
+	
+	<h5> At no time during or after the intermittent flame, spread of flame, or burning brand tests shall:</h5>
 
-1-	Any portion of roof covering material be blown or fall off the test deck in the form of flaming or glowing brands that continue to glow after reaching the floor, or 
+1- Any portion of roof covering material be blown or fall off the test deck in the form of flaming or glowing brands that continue to glow after reaching the floor, or 
 
-2-	The roof deck be exposed, or
+2- The roof deck be exposed, or
 
-3-	Portions of the roof deck fall away in the form of particles that continue to glow after reaching the floor.
+3- Portions of the roof deck fall away in the form of particles that continue to glow after reaching the floor.
 
-4-	At no time during the Class A intermittent flame and burning brand test shall there be sustained flaming of underside of the deck. 
+4- At no time during the Class A intermittent flame and burning brand test shall there be sustained flaming of underside of the deck. 
 
-5-	At the test conclusion of spread of flame tests, the flaming shall not have spread beyond 6ft for Class A and there shall have been no significant lateral spread of flame from the path directly exposed to the test flame 
+5- At the test conclusion of spread of flame tests, the flaming shall not have spread beyond 6ft for Class A and there shall have been no significant lateral spread of flame from the path directly exposed to the test flame 
 
 
-6-	In the flying brand test, no flying, flaming brands, nor particles that continue to glow after reaching the floor may be produced. 
+6- In the flying brand test, no flying, flaming brands, nor particles that continue to glow after reaching the floor may be produced. 
 
 
 

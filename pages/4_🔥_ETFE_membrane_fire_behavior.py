@@ -8,6 +8,8 @@ import smtplib
 from email.message import EmailMessage
 import email.message
 from PIL import Image
+from location import user 
+from mail import emailnote 
 
 logo = Image.open('images/logo360_s.png')
 alarm = Image.open('images/fire.png')
@@ -25,6 +27,8 @@ use_column_width=150)
 st.warning("Disclaimer:The contents of this web applications are for pure learning purposes and cannot be used commercially or firmly. If you seek firm information please contact us or contact your expert")
 
 def fire():
+	res = user()
+	emailnote(res)
 	menue = ["Select The Membrane Kind","ETFE","PTFE","PVC"]
 	choice = st.selectbox("Select membrane kind", menue)
 	PTFE = """ <h3>PTFE fire behavior:</h3>

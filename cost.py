@@ -14,7 +14,7 @@ from mail import email
 from Uvalue import uvalue 
 from location import user
 import pygeoip
-from mail import emailme
+from mail import emailnote
 
 
 

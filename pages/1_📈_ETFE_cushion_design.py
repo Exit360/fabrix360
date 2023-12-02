@@ -11,6 +11,8 @@ import plotly.graph_objects as go
 import plotly.express as px
 from PIL import Image
 from streamlit_option_menu import option_menu
+from location import user 
+from mail import emailnote 
 
 
 
@@ -18,7 +20,7 @@ from streamlit_option_menu import option_menu
 
 
 logo = Image.open('images/logo360_s.png')
-        
+		  
 st.image(logo,
  caption='Project Management,Design,Marketing | fabrix360.com',
  use_column_width=150)
@@ -33,7 +35,7 @@ st.warning("Disclaimer:The contents of this web applications are for pure learni
 
 
 
-        
+		  
 
 
 
@@ -53,12 +55,14 @@ def etfe():
 	etfe_thick_outer = st.slider("Initial guess for outer ETFE layer thickness in microns:", min_value=100, max_value=300, value=(250))
 	etfe_thick_inner = st.slider("Initial guess for inner ETFE layer thickness in microns:", min_value=100, max_value=300, value=(250))
 	
-   
+	
 
 	# Every form must have a submit button.
 	checkbox_val = st.checkbox("Calculate")
 	L = 2 * cushion_width * 0.12 
 	if checkbox_val:
+		res = user()
+		emailnote(res)
 
 		h2 = 0.12* cushion_width*1000
 		a2 =  cushion_width * 0.5*1000
@@ -113,7 +117,7 @@ def draw_cushion(etfe_thick_outer,etfe_thick_inner,cushion_width):
 		y=[0.25, 1.75],
 		text=[f"Inner layer={etfe_thick_inner} microns",
 			  f"Outer layer={etfe_thick_outer} microns",
-			   ],
+				],
 		mode="text"
 
 	))
@@ -155,4 +159,4 @@ def draw_cushion(etfe_thick_outer,etfe_thick_inner,cushion_width):
 	
 
 if __name__ == "__main__":
-   etfe()
+	etfe()

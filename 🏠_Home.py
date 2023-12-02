@@ -37,8 +37,7 @@ def main():
      }, orientation="horizontal")
     choice
 
-    res = user()
-    emailnote(res)
+  
     
   
     

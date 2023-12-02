@@ -1,6 +1,8 @@
 import math
 import streamlit as st
 from PIL import Image
+from location import user 
+from mail import emailnote 
 
 
 logo = Image.open('images/logo360_s.png')
@@ -16,6 +18,8 @@ st.warning("Disclaimer:The contents of this web applications are for pure learni
 
 def uvalue():
 	import math
+	res = user()
+	emailnote(res)
 
 	ther_exp = 3.2717E-3
 	ther_con = 0.026526

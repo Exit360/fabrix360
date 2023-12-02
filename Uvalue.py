@@ -1,9 +1,13 @@
 import math
 import streamlit as st
 from PIL import Image
+from location import user 
+from mail import emailnote
 
 
 def uvalue():
+	res = user()
+	emailnote(res)
 	import math
 
 	ther_exp = 3.2717E-3
