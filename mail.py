@@ -19,9 +19,9 @@ def email(person,cushion_width, span_of_cushion, no_of_layers, total_area, cost,
 	# message = task+"  with remark status"+Remark
 	
 	body = f"""Dear user, thank you for reaching out!\n
-	 For Cushion width of {cushion_width} m \n
-	 Cushion span of {span_of_cushion} m \n
-	 cushion number of layers {no_of_layers} no. \n
+	 For Panel width of {cushion_width} m \n
+	 Panel span of {span_of_cushion} m \n
+	 Panel number of layers {no_of_layers} no. \n
 	 Subject to minimum total area of skylight/facade of {total_area} m2 \n
 
 	  Cost/Price is AED  {cost}  per m2     (3.68 AED = 1 USD$)\n
@@ -42,6 +42,7 @@ def email(person,cushion_width, span_of_cushion, no_of_layers, total_area, cost,
 	# server.sendmail(email_user, email_send, text)
 	server.send_message(msg)
 	server.quit()
+	
 
 def emailme(person,cushion_width, span_of_cushion, no_of_layers, total_area, cost,res):
 	email = 'management@fabrix360.com'
@@ -57,9 +58,9 @@ def emailme(person,cushion_width, span_of_cushion, no_of_layers, total_area, cos
 	# message = task+"  with remark status"+Remark
 	
 	body = f"""{person} is reaching out!\n
-	 For Cushion width of {cushion_width} m \n
-	 Cushion span of {span_of_cushion} m \n
-	 cushion number of layers {no_of_layers} no. \n
+	 For Panel width of {cushion_width} m \n
+	 Panel span of {span_of_cushion} m \n
+	 Panel number of layers {no_of_layers} no. \n
 	 Subject to minimum total area of skylight/facade of {total_area} m2 \n
 
 	  Cost/Price is AED  {cost}  per m2     (3.68 AED = 1 USD$)\n
