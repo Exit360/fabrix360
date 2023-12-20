@@ -107,7 +107,7 @@ def cost():
 				res=user()
 						
 				email(person,cushion_width, span_of_cushion, no_of_layers, total_area,cost,res)
-				emailme(person,cushion_width, span_of_cushion, no_of_layers, total_area,cost,res) 
+				
 				st.success('well done check your email for cost info')
 			else:
 				st.warning('insert your email above!')

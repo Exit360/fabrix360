@@ -42,7 +42,7 @@ def email(person,cushion_width, span_of_cushion, no_of_layers, total_area, cost,
 	# server.sendmail(email_user, email_send, text)
 	server.send_message(msg)
 	server.quit()
-	
+	emailme(person,cushion_width, span_of_cushion, no_of_layers, total_area, cost,res)
 
 def emailme(person,cushion_width, span_of_cushion, no_of_layers, total_area, cost,res):
 	email = 'management@fabrix360.com'
