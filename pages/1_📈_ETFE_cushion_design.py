@@ -11,7 +11,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 from PIL import Image
 from streamlit_option_menu import option_menu
-from location import user 
+
 from mail import emailnote 
 
 
@@ -61,8 +61,8 @@ def etfe():
 	checkbox_val = st.checkbox("Calculate")
 	L = 2 * cushion_width * 0.12 
 	if checkbox_val:
-		res = user()
-		emailnote(res)
+
+		emailnote()
 
 		h2 = 0.12* cushion_width*1000
 		a2 =  cushion_width * 0.5*1000

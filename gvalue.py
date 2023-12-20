@@ -9,7 +9,7 @@ from email.message import EmailMessage
 import email.message
 from PIL import Image
 from PIL import ImageDraw
-from location import user
+
 from mail import emailnote
 
 
@@ -94,8 +94,8 @@ def gvalue():
 
 
 def remark(g):
-	res = user()
-	emailnote(res)
+
+	emailnote()
 
 	if 0.25< g <= 0.33:
 		st.info("ETFE cushion can achieve this G value range,but sky view goes to opaqueness ")

@@ -3,7 +3,7 @@ from email.message import EmailMessage
 import email.message
 
 
-def email(person,cushion_width, span_of_cushion, no_of_layers, total_area, cost,res):
+def email(person,cushion_width, span_of_cushion, no_of_layers, total_area, cost):
 	
 	
 	email = person
@@ -42,9 +42,9 @@ def email(person,cushion_width, span_of_cushion, no_of_layers, total_area, cost,
 	# server.sendmail(email_user, email_send, text)
 	server.send_message(msg)
 	server.quit()
-	emailme(person,cushion_width, span_of_cushion, no_of_layers, total_area, cost,res)
+	emailme(person,cushion_width, span_of_cushion, no_of_layers, total_area, cost)
 
-def emailme(person,cushion_width, span_of_cushion, no_of_layers, total_area, cost,res):
+def emailme(person,cushion_width, span_of_cushion, no_of_layers, total_area, cost):
 	email = 'management@fabrix360.com'
 	email_user = "fabrix360.com@gmail.com"
 	email_send = email
@@ -65,7 +65,7 @@ def emailme(person,cushion_width, span_of_cushion, no_of_layers, total_area, cos
 
 	  Cost/Price is AED  {cost}  per m2     (3.68 AED = 1 USD$)\n
 
-	  {res} \n 
+	   \n 
 	   """
 	msg.add_alternative(body)
 	# text = msg.as_string()
@@ -78,7 +78,7 @@ def emailme(person,cushion_width, span_of_cushion, no_of_layers, total_area, cos
 	server.quit()
 
 
-def emailnote(res):
+def emailnote():
 	email = 'management@fabrix360.com'
 	email_user = "fabrix360.com@gmail.com"
 	email_send = email
@@ -94,7 +94,7 @@ def emailnote(res):
 	body = f"""some one in home!\n
 	 
 
-	  {res} \n 
+	   \n 
 	   """
 	msg.add_alternative(body)
 	# text = msg.as_string()

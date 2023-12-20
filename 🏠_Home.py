@@ -14,7 +14,7 @@ from PIL import Image
 # from etfeseo import etfeseo
 from streamlit_option_menu import option_menu
 from Uvalue import uvalue
-from location import user
+
 from mail import emailnote
 
 

@@ -9,12 +9,12 @@ import smtplib
 from email.message import EmailMessage
 import email.message
 from PIL import Image
-from location import user
+
 from mail import emailnote
 
 def fire():
-	res = user()
-	emailnote(res)
+	
+	emailnote()
 	menue = ["Select The Membrane Kind","ETFE","PTFE","PVC"]
 	choice = st.selectbox("Select membrane kind", menue)
 	PTFE = """ <h3>PTFE fire behavior:</h3>
