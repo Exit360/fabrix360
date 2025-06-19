@@ -16,7 +16,7 @@ from mail import emailnote
 logo = Image.open('images/logo360_s.png')
 st.image(logo,
  caption='Project Management,Design,Marketing | fabrix360.com',
- use_column_width=150)
+ use_container_width=150)
 web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
 st.markdown(web,unsafe_allow_html=True)
 home = '<span style="font-style: italic;color: #000080;"><h6><a href="https://fabrixhub.onrender.com/">Home</a></h6></span>'
@@ -40,7 +40,7 @@ def gvalue():
 		skyview = Image.open('images/sky.jpg')
 		st.image(skyview,
 			 caption='Natural sky view' ,
-			 use_column_width=100)
+			 use_container_width=100)
 		
 
 	with col1:
@@ -60,7 +60,7 @@ def gvalue():
 
 			return st.image(imgsk,
 				caption=f'G value = {g} (Typical viewer standing below skylight)',
-				use_column_width=100)
+				use_container_width=100)
 
 		elif 0.2<=g <= 0.25:
 			g1 = 0.98
@@ -69,7 +69,7 @@ def gvalue():
 
 			return st.image(imgsk,
 				caption=f'G value = {g} (Typical viewer standing below skylight)',
-				use_column_width=100)
+				use_container_width=100)
 
 			
 		elif g > 0.85:
@@ -79,7 +79,7 @@ def gvalue():
 			imgsk=Image.blend(imgfrit,img,(g))
 			return st.image(imgsk,
 				caption=f'G value = {g} (Typical viewer standing below skylight)',
-				use_column_width=100)
+				use_container_width=100)
 			
 
 
@@ -98,7 +98,7 @@ def gvalue():
 
 			return st.image(imgsk, 
 				caption=f'G value = {g}(Typical viewer standing below skylight)',
-				use_column_width=100)
+				use_container_width=100)
 		
 
 
@@ -162,5 +162,5 @@ if __name__ == "__main__":
 			# 	skyview = Image.open('images/sky.jpg')
 			# 	st.image(skyview,
 			# 		 caption='Natural sky view' ,
-			# 		 use_column_width=150)
+			# 		 use_container_width=150)
 

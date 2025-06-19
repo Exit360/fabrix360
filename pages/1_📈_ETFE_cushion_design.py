@@ -23,7 +23,7 @@ logo = Image.open('images/logo360_s.png')
 		  
 st.image(logo,
  caption='Project Management,Design,Marketing | fabrix360.com',
- use_column_width=150)
+ use_container_width=150)
 
 web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
 st.markdown(web,unsafe_allow_html=True)
@@ -44,7 +44,7 @@ def etfe():
 	skylight = Image.open('images/cushion-app_cost1.png')
 	st.image(skylight,
 		 caption='Typical ETFE Skylight for Enclosed and Partially Enclosed Buildings and Structures-Arched Roofs, Height < 33m , Rise-to-Span ration < 0.2 , snow load is not considered',
-		 use_column_width=150)
+		 use_container_width=150)
 
 	st.write("Calculating ETFE film thickness for given cushion width start by changing cushion width(m) on below slider bar and then change initial film thicknesses outer and inner, try for learning to adopt any thickness between 100 to 300 microns but standard market available thicknesses are 100, 200, 250 & 300 microns:")
 

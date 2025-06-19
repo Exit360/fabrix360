@@ -37,7 +37,7 @@ def cost():
 	skylight = Image.open('images/cushion-app_cost1.png')
 	st.image(skylight,
 		 caption='Typical rectangualr ETFE Skylight ',
-		 use_column_width=150)
+		 use_container_width=150)
 
 	st.write("Lets adjust below system specifications to get the expected cost")
 

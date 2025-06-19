@@ -8,7 +8,7 @@ from mail import emailnote
 logo = Image.open('images/logo360_s.png')
 st.image(logo,
  caption='Project Management,Design,Marketing | fabrix360.com',
- use_column_width=150)
+ use_container_width=150)
 web = '<span style="font-style: italic;color: #000080;"><h6><a href="https://www.fabrix360.com/contactus">Contact us</a></h6></span>'
 st.markdown(web,unsafe_allow_html=True)
 home = '<span style="font-style: italic;color: #000080;"><h6><a href="https://fabrixhub.onrender.com/">Home</a></h6></span>'
@@ -35,7 +35,7 @@ def uvalue():
 	skylight = Image.open('images/uvalue.png')
 	st.image(skylight,
 		 caption='General ETFE cushion set up',
-		 use_column_width=150)
+		 use_container_width=150)
 	intro = """<h6> What to do? its simple,A- Select the heat source temprature T1 and cooling source temprature T2, B- select the cushion thickness refer to the sketch above
 			  , C- Finally select the width of cushion and angle of inclination(e.g a typical roof in summer angle would = 180 degrees, the same roof in winter angle would = 0, if facade select any angle e.g 90 degrees or any angle around just mind that angle measured from heating source<h6>""" 
 	st.markdown(intro,unsafe_allow_html=True)

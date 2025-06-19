@@ -30,7 +30,7 @@ def gvalue():
 		skyview = Image.open('images/sky.jpg')
 		st.image(skyview,
 			 caption='Natural sky view' ,
-			 use_column_width=100)
+			 use_container_width=100)
 		
 
 	with col1:
@@ -50,7 +50,7 @@ def gvalue():
 
 			return st.image(imgsk,
 				caption=f'G value = {g} (Typical viewer standing below skylight)',
-				use_column_width=100)
+				use_container_width=100)
 
 		elif 0.2<=g <= 0.25:
 			g1 = 0.98
@@ -59,7 +59,7 @@ def gvalue():
 
 			return st.image(imgsk,
 				caption=f'G value = {g} (Typical viewer standing below skylight)',
-				use_column_width=100)
+				use_container_width=100)
 
 			
 		elif g > 0.85:
@@ -69,7 +69,7 @@ def gvalue():
 			imgsk=Image.blend(imgfrit,img,(g))
 			return st.image(imgsk,
 				caption=f'G value = {g} (Typical viewer standing below skylight)',
-				use_column_width=100)
+				use_container_width=100)
 			
 
 
@@ -88,7 +88,7 @@ def gvalue():
 
 			return st.image(imgsk, 
 				caption=f'G value = {g}(Typical viewer standing below skylight)',
-				use_column_width=100)
+				use_container_width=100)
 		
 
 
@@ -150,5 +150,5 @@ def remark(g):
 			# 	skyview = Image.open('images/sky.jpg')
 			# 	st.image(skyview,
 			# 		 caption='Natural sky view' ,
-			# 		 use_column_width=150)
+			# 		 use_container_width=150)
 
